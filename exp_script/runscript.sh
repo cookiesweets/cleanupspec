@@ -226,7 +226,7 @@ fi
 mkdir -p $OUTPUT_DIR
 
 #Run Dir
-RUN_DIR=$SPEC_PATH/benchspec/CPU/$BENCHMARK_CODE/run/run_base_refrate_sparespec.0000
+RUN_DIR=$SPEC_PATH/benchspec/CPU/$BENCHMARK_CODE/run/run_base_refrate_sparespec-m64.0000
 
 # File log used for stdout
 SCRIPT_OUT=$OUTPUT_DIR/runscript.log
