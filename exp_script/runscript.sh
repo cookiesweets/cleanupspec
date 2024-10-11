@@ -257,7 +257,7 @@ echo "" | tee -a $SCRIPT_OUT
 
 # Launch Gem5:
 $GEM5_PATH/build/X86_MESI_Two_Level/gem5.opt \
-    --outdir=$OUTPUT_DIR $GEM5_PATH/configs/example/spec06_config.py \
+    --outdir=$OUTPUT_DIR $GEM5_PATH/configs/example/spec17_config.py \
     --benchmark=$BENCHMARK --benchmark_stdout=$OUTPUT_DIR/$BENCHMARK.out \
     --benchmark_stderr=$OUTPUT_DIR/$BENCHMARK.err \
     --num-cpus=1 --mem-size=16GB \
