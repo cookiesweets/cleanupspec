@@ -28,7 +28,7 @@
 # (Modify as needed)
 
 BENCHMARK=perlbench                    # Benchmark name, e.g. perlbench
-CHECKPOINT_CONFIG="ooo_4Gmem_100K"
+CHECKPOINT_CONFIG="ooo_16Gmem_100K"
 INST_TAKE_CHECKPOINT=100000
 
 #CHECKPOINT_CONFIG="ooo_4Gmem_10Bn" #Name of directory inside CKPT_PATH
@@ -64,35 +64,35 @@ else
 fi
 
 ######################### BENCHMARK FOLDER NAMES ####################
-PERLBENCH_CODE=400.perlbench
+PERLBENCH_CODE=500.perlbench_r
 BZIP2_CODE=401.bzip2
-GCC_CODE=403.gcc
-BWAVES_CODE=410.bwaves
+GCC_CODE=502.gcc_r
+BWAVES_CODE=503.bwaves_r
 GAMESS_CODE=416.gamess
-MCF_CODE=429.mcf
+MCF_CODE=505.mcf_r
 MILC_CODE=433.milc
 ZEUSMP_CODE=434.zeusmp
 GROMACS_CODE=435.gromacs
 CACTUSADM_CODE=436.cactusADM
 LESLIE3D_CODE=437.leslie3d
-NAMD_CODE=444.namd
+NAMD_CODE=508.namd_r
 GOBMK_CODE=445.gobmk
 DEALII_CODE=447.dealII
 SOPLEX_CODE=450.soplex
 POVRAY_CODE=453.povray
 CALCULIX_CODE=454.calculix
 HMMER_CODE=456.hmmer
-SJENG_CODE=458.sjeng
+DEEPSJENG_CODE=531.deepsjeng_r
 GEMSFDTD_CODE=459.GemsFDTD
 LIBQUANTUM_CODE=462.libquantum
 H264REF_CODE=464.h264ref
 TONTO_CODE=465.tonto
-LBM_CODE=470.lbm
-OMNETPP_CODE=471.omnetpp
+LBM_CODE=508.lbm_r
+OMNETPP_CODE=520.omnetpp_r
 ASTAR_CODE=473.astar
-WRF_CODE=481.wrf
+WRF_CODE=521.wrf_r
 SPHINX3_CODE=482.sphinx3
-XALANCBMK_CODE=483.xalancbmk
+XALANCBMK_CODE=523.xalancbmk_r
 SPECRAND_INT_CODE=998.specrand
 SPECRAND_FLOAT_CODE=999.specrand
 
@@ -154,8 +154,8 @@ fi
 if [[ "$BENCHMARK" == "hmmer" ]]; then
     BENCHMARK_CODE=$HMMER_CODE
 fi
-if [[ "$BENCHMARK" == "sjeng" ]]; then
-    BENCHMARK_CODE=$SJENG_CODE
+if [[ "$BENCHMARK" == "deepsjeng" ]]; then
+    BENCHMARK_CODE=$DEEPSJENG_CODE
 fi
 if [[ "$BENCHMARK" == "GemsFDTD" ]]; then
     BENCHMARK_CODE=$GEMSFDTD_CODE
@@ -253,7 +253,7 @@ $GEM5_PATH/build/X86_MESI_Two_Level/gem5.opt \
     --outdir=$OUTPUT_DIR $GEM5_PATH/configs/example/spec06_config.py \
     --benchmark=$BENCHMARK --benchmark_stdout=$OUTPUT_DIR/$BENCHMARK.out \
     --benchmark_stderr=$OUTPUT_DIR/$BENCHMARK.err \
-    --num-cpus=1 --mem-size=4GB \
+    --num-cpus=1 --mem-size=16GB \
     --checkpoint-dir=$CKPT_OUT_DIR \
     --take-checkpoint=$INST_TAKE_CHECKPOINT --at-instruction \
     --mem-type=SimpleMemory \
