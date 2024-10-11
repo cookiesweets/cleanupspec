@@ -219,7 +219,7 @@ fi
 mkdir -p $OUTPUT_DIR
 
 #Run Dir
-RUN_DIR=$SPEC_PATH/benchspec/CPU/$BENCHMARK_CODE/run/run_base_refrate_sparespec.0000
+RUN_DIR=$SPEC_PATH/benchspec/CPU/$BENCHMARK_CODE/run/run_base_refrate_sparespec-m64.0000
 
 # File log used for stdout
 SCRIPT_OUT=$OUTPUT_DIR/runscript.log
@@ -250,7 +250,7 @@ cd $RUN_DIR
 
 # Launch Gem5:
 $GEM5_PATH/build/X86_MESI_Two_Level/gem5.opt \
-    --outdir=$OUTPUT_DIR $GEM5_PATH/configs/example/spec06_config.py \
+    --outdir=$OUTPUT_DIR $GEM5_PATH/configs/example/spec17_config.py \
     --benchmark=$BENCHMARK --benchmark_stdout=$OUTPUT_DIR/$BENCHMARK.out \
     --benchmark_stderr=$OUTPUT_DIR/$BENCHMARK.err \
     --num-cpus=1 --mem-size=16GB \
