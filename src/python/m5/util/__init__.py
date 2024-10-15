@@ -124,8 +124,7 @@ def compareVersions(v1, v2):
         if isinstance(v, (list,tuple)):
             return v
         elif isinstance(v, str):
-            return map(lambda x: int(re.match('\d+', x).group()) if re.match('\d+', x) else None, v.split('.'))
-            # return map(lambda x: int(re.match('\d+', x).group()), v.split('.'))
+            return map(lambda x: int(re.match('\d+', x).group()), v.split('.'))
         else:
             raise TypeError
 
