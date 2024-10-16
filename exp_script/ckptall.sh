@@ -27,12 +27,12 @@
 ############ CHECKPOINT CONFIGURATION #############
 # (Modify as needed)
 
-BENCHMARK=perlbench                    # Benchmark name, e.g. perlbench
-CHECKPOINT_CONFIG="ooo_8Gmem_100K"
-INST_TAKE_CHECKPOINT=100000
+BENCHMARK=$1                    # Benchmark name, e.g. perlbench
+# CHECKPOINT_CONFIG="ooo_8Gmem_100K"
+# INST_TAKE_CHECKPOINT=100000
 
-#CHECKPOINT_CONFIG="ooo_4Gmem_10Bn" #Name of directory inside CKPT_PATH
-#INST_TAKE_CHECKPOINT=10000000000   #Instruction count after which checkpoint was taken
+CHECKPOINT_CONFIG="ooo_8Gmem_10Bn" #Name of directory inside CKPT_PATH
+INST_TAKE_CHECKPOINT=10000000000   #Instruction count after which checkpoint was taken
 
 MAX_INSTS=$((INST_TAKE_CHECKPOINT + 1)) #simulate till checkpoint instruction
 
@@ -196,7 +196,7 @@ fi
 
 # Sanity check
 if [[ "$BENCHMARK_CODE" == "none" ]]; then
-    echo "Input benchmark selection $BENCHMARK did not match any known SPEC CPU2006 benchmarks! Exiting."
+    echo "Input benchmark selection $BENCHMARK did not match any known SPEC CPU2017 benchmarks! Exiting."
     exit 1
 fi
 
