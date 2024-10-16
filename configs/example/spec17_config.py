@@ -155,96 +155,162 @@ if options.benchmark:
     if options.benchmark == 'perlbench':
         print '--> perlbench'
         process = spec17_benchmarks.perlbench
-    elif options.benchmark == 'bzip2':
-        print '--> bzip2'
-        process = spec17_benchmarks.bzip2
     elif options.benchmark == 'gcc':
         print '--> gcc'
         process = spec17_benchmarks.gcc
     elif options.benchmark == 'bwaves':
         print '--> bwaves'
         process = spec17_benchmarks.bwaves
-    elif options.benchmark == 'gamess':
-        print '--> gamess'
-        process = spec17_benchmarks.gamess
     elif options.benchmark == 'mcf':
         print '--> mcf'
         process = spec17_benchmarks.mcf
-    elif options.benchmark == 'milc':
-        print '--> milc'
-        process = spec17_benchmarks.milc
-    elif options.benchmark == 'zeusmp':
-        print '--> zeusmp'
-        process = spec17_benchmarks.zeusmp
-    elif options.benchmark == 'gromacs':
-        print '--> gromacs'
-        process = spec17_benchmarks.gromacs
-    elif options.benchmark == 'cactusADM':
-        print '--> cactusADM'
-        process = spec17_benchmarks.cactusADM
-    elif options.benchmark == 'leslie3d':
-        print '--> leslie3d'
-        process = spec17_benchmarks.leslie3d
+    elif options.benchmark == 'cactuBSSN':
+        print '--> cactuBSSN'
+        process = spec17_benchmarks.cactuBSSN
     elif options.benchmark == 'namd':
         print '--> namd'
         process = spec17_benchmarks.namd
-    elif options.benchmark == 'gobmk':
-        print '--> gobmk'
-        process = spec17_benchmarks.gobmk
-    elif options.benchmark == 'dealII':
-        print '--> dealII'
-        process = spec17_benchmarks.dealII
-    elif options.benchmark == 'soplex':
-        print '--> soplex'
-        process = spec17_benchmarks.soplex
+    elif options.benchmark == 'parest':
+        print '--> parest'
+        process = spec17_benchmarks.parest
     elif options.benchmark == 'povray':
         print '--> povray'
         process = spec17_benchmarks.povray
-    elif options.benchmark == 'calculix':
-        print '--> calculix'
-        process = spec17_benchmarks.calculix
-    elif options.benchmark == 'hmmer':
-        print '--> hmmer'
-        process = spec17_benchmarks.hmmer
-    elif options.benchmark == 'sjeng':
-        print '--> sjeng'
-        process = spec17_benchmarks.sjeng
-    elif options.benchmark == 'GemsFDTD':
-        print '--> GemsFDTD'
-        process = spec17_benchmarks.GemsFDTD
-    elif options.benchmark == 'libquantum':
-        print '--> libquantum'
-        process = spec17_benchmarks.libquantum
-    elif options.benchmark == 'h264ref':
-        print '--> h264ref'
-        process = spec17_benchmarks.h264ref
-    elif options.benchmark == 'tonto':
-        print '--> tonto'
-        process = spec17_benchmarks.tonto
     elif options.benchmark == 'lbm':
         print '--> lbm'
         process = spec17_benchmarks.lbm
     elif options.benchmark == 'omnetpp':
         print '--> omnetpp'
         process = spec17_benchmarks.omnetpp
-    elif options.benchmark == 'astar':
-        print '--> astar'
-        process = spec17_benchmarks.astar
     elif options.benchmark == 'wrf':
         print '--> wrf'
         process = spec17_benchmarks.wrf
-    elif options.benchmark == 'sphinx3':
-        print '--> sphinx3'
-        process = spec17_benchmarks.sphinx3
     elif options.benchmark == 'xalancbmk':
         print '--> xalancbmk'
         process = spec17_benchmarks.xalancbmk
-    elif options.benchmark == 'specrand_i':
-        print '--> specrand_i'
-        process = spec17_benchmarks.specrand_i
-    elif options.benchmark == 'specrand_f':
-        print '--> specrand_f'
-        process = spec17_benchmarks.specrand_f
+    elif options.benchmark == 'x264':
+        print '--> x264'
+        process = spec17_benchmarks.x264
+    elif options.benchmark == 'blender':
+        print '--> blender'
+        process = spec17_benchmarks.blender
+    elif options.benchmark == 'cam4':
+        print '--> cam4'
+        process = spec17_benchmarks.cam4
+    elif options.benchmark == 'deepsjeng':
+        print '--> deepsjeng'
+        process = spec17_benchmarks.deepsjeng
+    elif options.benchmark == 'imagick':
+        print '--> imagick'
+        process = spec17_benchmarks.imagick
+    elif options.benchmark == 'leela':
+        print '--> leela'
+        process = spec17_benchmarks.leela
+    elif options.benchmark == 'nab':
+        print '--> nab'
+        process = spec17_benchmarks.nab
+    elif options.benchmark == 'fotonik3d':
+        print '--> fotonik3d'
+        process = spec17_benchmarks.fotonik3d
+    elif options.benchmark == 'roms':
+        print '--> roms'
+        process = spec17_benchmarks.roms
+    elif options.benchmark == 'xz':
+        print '--> xz'
+        process = spec17_benchmarks.xz
+    # if options.benchmark == 'perlbench':
+    #     print '--> perlbench'
+    #     process = spec17_benchmarks.perlbench
+    # elif options.benchmark == 'bzip2':
+    #     print '--> bzip2'
+    #     process = spec17_benchmarks.bzip2
+    # elif options.benchmark == 'gcc':
+    #     print '--> gcc'
+    #     process = spec17_benchmarks.gcc
+    # elif options.benchmark == 'bwaves':
+    #     print '--> bwaves'
+    #     process = spec17_benchmarks.bwaves
+    # elif options.benchmark == 'gamess':
+    #     print '--> gamess'
+    #     process = spec17_benchmarks.gamess
+    # elif options.benchmark == 'mcf':
+    #     print '--> mcf'
+    #     process = spec17_benchmarks.mcf
+    # elif options.benchmark == 'milc':
+    #     print '--> milc'
+    #     process = spec17_benchmarks.milc
+    # elif options.benchmark == 'zeusmp':
+    #     print '--> zeusmp'
+    #     process = spec17_benchmarks.zeusmp
+    # elif options.benchmark == 'gromacs':
+    #     print '--> gromacs'
+    #     process = spec17_benchmarks.gromacs
+    # elif options.benchmark == 'cactusADM':
+    #     print '--> cactusADM'
+    #     process = spec17_benchmarks.cactusADM
+    # elif options.benchmark == 'leslie3d':
+    #     print '--> leslie3d'
+    #     process = spec17_benchmarks.leslie3d
+    # elif options.benchmark == 'namd':
+    #     print '--> namd'
+    #     process = spec17_benchmarks.namd
+    # elif options.benchmark == 'gobmk':
+    #     print '--> gobmk'
+    #     process = spec17_benchmarks.gobmk
+    # elif options.benchmark == 'dealII':
+    #     print '--> dealII'
+    #     process = spec17_benchmarks.dealII
+    # elif options.benchmark == 'soplex':
+    #     print '--> soplex'
+    #     process = spec17_benchmarks.soplex
+    # elif options.benchmark == 'povray':
+    #     print '--> povray'
+    #     process = spec17_benchmarks.povray
+    # elif options.benchmark == 'calculix':
+    #     print '--> calculix'
+    #     process = spec17_benchmarks.calculix
+    # elif options.benchmark == 'hmmer':
+    #     print '--> hmmer'
+    #     process = spec17_benchmarks.hmmer
+    # elif options.benchmark == 'sjeng':
+    #     print '--> sjeng'
+    #     process = spec17_benchmarks.sjeng
+    # elif options.benchmark == 'GemsFDTD':
+    #     print '--> GemsFDTD'
+    #     process = spec17_benchmarks.GemsFDTD
+    # elif options.benchmark == 'libquantum':
+    #     print '--> libquantum'
+    #     process = spec17_benchmarks.libquantum
+    # elif options.benchmark == 'h264ref':
+    #     print '--> h264ref'
+    #     process = spec17_benchmarks.h264ref
+    # elif options.benchmark == 'tonto':
+    #     print '--> tonto'
+    #     process = spec17_benchmarks.tonto
+    # elif options.benchmark == 'lbm':
+    #     print '--> lbm'
+    #     process = spec17_benchmarks.lbm
+    # elif options.benchmark == 'omnetpp':
+    #     print '--> omnetpp'
+    #     process = spec17_benchmarks.omnetpp
+    # elif options.benchmark == 'astar':
+    #     print '--> astar'
+    #     process = spec17_benchmarks.astar
+    # elif options.benchmark == 'wrf':
+    #     print '--> wrf'
+    #     process = spec17_benchmarks.wrf
+    # elif options.benchmark == 'sphinx3':
+    #     print '--> sphinx3'
+    #     process = spec17_benchmarks.sphinx3
+    # elif options.benchmark == 'xalancbmk':
+    #     print '--> xalancbmk'
+    #     process = spec17_benchmarks.xalancbmk
+    # elif options.benchmark == 'specrand_i':
+    #     print '--> specrand_i'
+    #     process = spec17_benchmarks.specrand_i
+    # elif options.benchmark == 'specrand_f':
+    #     print '--> specrand_f'
+    #     process = spec17_benchmarks.specrand_f
     else:
         print "No recognized SPEC2017 benchmark selected! Exiting."
         sys.exit(1)
