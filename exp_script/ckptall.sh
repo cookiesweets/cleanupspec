@@ -124,96 +124,96 @@ XZ_CODE=557.xz_r
 
 BENCHMARK_CODE="none"
 
-if [["$BENCHMARK" == "perlbench" ]]; then
+if [[ "$BENCHMARK" == "perlbench" ]]; then
     BENCHMARK_CODE=$PERLBENCH_CODE
 fi
 
-if [["$BENCHMARK" == "gcc" ]]; then
+if [[ "$BENCHMARK" == "gcc" ]]; then
     BENCHMARK_CODE=$GCC_CODE
 fi
 
-if [["$BENCHMARK" == "bwaves" ]]; then
+if [[ "$BENCHMARK" == "bwaves" ]]; then
     BENCHMARK_CODE=$BWAVES_CODE
 fi
 
-if [["$BENCHMARK" == "mcf" ]]; then
+if [[ "$BENCHMARK" == "mcf" ]]; then
     BENCHMARK_CODE=$MCF_CODE
 fi
 
-if [["$BENCHMARK" == "cactuBSSN" ]]; then
+if [[ "$BENCHMARK" == "cactuBSSN" ]]; then
     BENCHMARK_CODE=$CACTUBSSN_CODE
 fi
 
-if [["$BENCHMARK" == "namd" ]]; then
+if [[ "$BENCHMARK" == "namd" ]]; then
     BENCHMARK_CODE=$NAMD_CODE
 fi
 
-if [["$BENCHMARK" == "parest" ]]; then
+if [[ "$BENCHMARK" == "parest" ]]; then
     BENCHMARK_CODE=$PAREST_CODE
 fi
 
-if [["$BENCHMARK" == "povray" ]]; then
+if [[ "$BENCHMARK" == "povray" ]]; then
     BENCHMARK_CODE=$POVRAY_CODE
 fi
 
-if [["$BENCHMARK" == "lbm" ]]; then
+if [[ "$BENCHMARK" == "lbm" ]]; then
     BENCHMARK_CODE=$LBM_CODE
 fi
 
-if [["$BENCHMARK" == "omnetpp" ]]; then
+if [[ "$BENCHMARK" == "omnetpp" ]]; then
     BENCHMARK_CODE=$OMNETPP_CODE
 fi
 
-if [["$BENCHMARK" == "wrf" ]]; then
+if [[ "$BENCHMARK" == "wrf" ]]; then
     BENCHMARK_CODE=$WRF_CODE
 fi
 
-if [["$BENCHMARK" == "xalancbmk" ]]; then
+if [[ "$BENCHMARK" == "xalancbmk" ]]; then
     BENCHMARK_CODE=$XALANCBMK_CODE
 fi
 
-if [["$BENCHMARK" == "x264" ]]; then
+if [[ "$BENCHMARK" == "x264" ]]; then
     BENCHMARK_CODE=$X264_CODE
 fi
 
-if [["$BENCHMARK" == "blender" ]]; then
+if [[ "$BENCHMARK" == "blender" ]]; then
     BENCHMARK_CODE=$BLENDER_CODE
 fi
 
-if [["$BENCHMARK" == "cam4" ]]; then
+if [[ "$BENCHMARK" == "cam4" ]]; then
     BENCHMARK_CODE=$CAM4_CODE
 fi
 
-if [["$BENCHMARK" == "deepsjeng" ]]; then
+if [[ "$BENCHMARK" == "deepsjeng" ]]; then
     BENCHMARK_CODE=$DEEPSJENG_CODE
 fi
 
-if [["$BENCHMARK" == "imagick" ]]; then
+if [[ "$BENCHMARK" == "imagick" ]]; then
     BENCHMARK_CODE=$IMAGICK_CODE
 fi
 
-if [["$BENCHMARK" == "leela" ]]; then
+if [[ "$BENCHMARK" == "leela" ]]; then
     BENCHMARK_CODE=$LEELA_CODE
 fi
 
-if [["$BENCHMARK" == "nab" ]]; then
+if [[ "$BENCHMARK" == "nab" ]]; then
     BENCHMARK_CODE=$NAB_CODE
 fi
 
-if [["$BENCHMARK" == "fotonik3d" ]]; then
+if [[ "$BENCHMARK" == "fotonik3d" ]]; then
     BENCHMARK_CODE=$FOTONIK3D_CODE
 fi
 
-if [["$BENCHMARK" == "roms" ]]; then
+if [[ "$BENCHMARK" == "roms" ]]; then
     BENCHMARK_CODE=$ROMS_CODE
 fi
 
-if [["$BENCHMARK" == "xz" ]]; then
+if [[ "$BENCHMARK" == "xz" ]]; then
     BENCHMARK_CODE=$XZ_CODE
 fi
 
 
-# if [[ "$BENCHMARK" == "perlbench" ]]; then
+# if [[  "$BENCHMARK" == "perlbench" ]]; then
 #     BENCHMARK_CODE=$PERLBENCH_CODE
 # fi
 # if [[ "$BENCHMARK" == "bzip2" ]]; then
