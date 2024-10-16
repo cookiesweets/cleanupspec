@@ -50,6 +50,7 @@ bwaves.executable = 'bwaves' + x86_suffix
 #bwaves.cmd = [bwaves.executable]
 # REF CMDS
 bwaves.cmd = [bwaves.executable] + ['bwaves_1']
+bwaves.input = 'bwaves_1.in'
 #bwaves.output = out_dir + 'bwaves.out'
 
 #505.mcf
@@ -81,7 +82,25 @@ namd.executable = 'namd' + x86_suffix
 namd.cmd = [namd.executable] + ['--input', 'apoa1.input', '--output', 'apoa1.ref.output', '--iterations', '65']
 #namd.output = out_dir + 'namd.out'
 
-#508.lbm
+#510.parest
+parest = Process() # Update June 7, 2017: This used to be LiveProcess()
+parest.executable = 'parest' + x86_suffix
+# TEST CMDS
+#parest.cmd = [parest.executable] + ['--input', 'parest.input', '--output', 'parest.out', '--iterations', '1']
+# REF CMDS
+parest.cmd = [parest.executable] + ['ref.prm']
+#parest.output = out_dir + 'parest.out'
+
+#511.povray
+povray = Process() # Update June 7, 2017: This used to be LiveProcess()
+povray.executable = 'povray' + x86_suffix
+# TEST CMDS
+#povray.cmd = [povray.executable] + ['SPEC-benchmark-test.ini']
+# REF CMDS
+povray.cmd = [povray.executable] + ['SPEC-benchmark-ref.ini']
+#povray.output = out_dir + 'povray.out'
+
+#519.lbm
 lbm = Process() # Update June 7, 2017: This used to be LiveProcess()
 lbm.executable = 'lbm' + x86_suffix
 # TEST CMDS
@@ -119,6 +138,33 @@ xalancbmk.cmd = [xalancbmk.executable] + ['-v','t5.xml','xalanc.xsl']
 ######## NOT WORKING ###########
 #xalancbmk.output = out_dir + 'xalancbmk.out'
 
+#525.x264
+x264 = Process() # Update June 7, 2017: This used to be LiveProcess()
+x264.executable = 'x264' + x86_suffix
+# TEST CMDS
+#x264.cmd = [x264.executable] + ['test.txt']
+# REF CMDS
+x264.cmd = [x264.executable] + ['--pass','1','--stats','x264_stats.log','--bitrate','1000','--frames','1000','-o','BuckBunny_New.264','BuckBunny.yuv','1280x720']
+#x264.output = out_dir + 'x264.out'
+
+#526.blender
+blender = Process() # Update June 7, 2017: This used to be LiveProcess()
+blender.executable = 'blender' + x86_suffix
+# TEST CMDS
+#blender.cmd = [blender.executable] + ['test.txt']
+# REF CMDS
+blender.cmd = [blender.executable] + ['sh3_no_char.blend','--render-output','sh3_no_char_','--threads','1','-b','-F','RAWTGA','-s','849','-e','849','-a']
+#blender.output = out_dir + 'blender.out'
+
+#527.cam4
+cam4 = Process() # Update June 7, 2017: This used to be LiveProcess()
+cam4.executable = 'cam4' + x86_suffix
+# TEST CMDS
+#cam4.cmd = [cam4.executable] + ['test.txt']
+# REF CMDS
+cam4.cmd = [cam4.executable]
+#cam4.output = out_dir + 'cam4.out'
+
 #531.deepsjeng
 deepsjeng = Process() # Update June 7, 2017: This used to be LiveProcess()
 deepsjeng.executable = 'deepsjeng' + x86_suffix
@@ -155,7 +201,26 @@ nab.executable = 'nab' + x86_suffix
 nab.cmd = [nab.executable] + ['1am0','1122214447','122']
 #nab.output = out_dir + 'deepsjeng.out'
 
-#544.xz
+#549.fotonik3d
+fotonik3d = Process() # Update June 7, 2017: This used to be LiveProcess()
+fotonik3d.executable = 'fotonik3d' + x86_suffix
+# TEST CMDS
+#fotonik3d.cmd = [fotonik3d.executable] + ['test.txt']
+# REF CMDS
+fotonik3d.cmd = [fotonik3d.executable]
+#fotonik3d.output = out_dir + 'deepsjeng.out'
+
+#554.roms
+roms = Process() # Update June 7, 2017: This used to be LiveProcess()
+roms.executable = 'roms' + x86_suffix
+# TEST CMDS
+#roms.cmd = [roms.executable] + ['test.txt']
+# REF CMDS
+roms.cmd = [roms.executable]
+roms.input = ['ocean_benchmark2.in.x']
+#fotonik3d.output = out_dir + 'deepsjeng.out'
+
+#557.xz
 xz = Process() # Update June 7, 2017: This used to be LiveProcess()
 xz.executable = 'xz' + x86_suffix
 # TEST CMDS
