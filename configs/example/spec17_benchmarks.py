@@ -27,7 +27,7 @@ perlbench.cmd = [perlbench.executable] + ['-I./lib', 'checkspam.pl', '2500', '5'
 
 #502.gcc
 gcc = Process() # Update June 7, 2017: This used to be LiveProcess()
-gcc.executable = 'gcc' + x86_suffix
+gcc.executable = 'cpugcc' + x86_suffix
 # TEST CMDS
 #gcc.cmd = [gcc.executable] + ['cccp.i', '-o', 'cccp.s']
 # REF CMDS
@@ -64,7 +64,7 @@ mcf.cmd = [mcf.executable] + ['inp.in']
 
 #507.cactuBSSN
 cactuBSSN = Process() # Update June 7, 2017: This used to be LiveProcess()
-cactuBSSN.executable = 'cactuBSSN' + x86_suffix
+cactuBSSN.executable = 'cactusBSSN' + x86_suffix
 # TEST CMDS
 #cactuBSSN.cmd = [cactuBSSN.executable]
 #cactuBSSN.input = 'su3imp.in'
