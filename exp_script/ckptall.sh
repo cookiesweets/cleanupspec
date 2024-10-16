@@ -65,134 +65,247 @@ fi
 
 ######################### BENCHMARK FOLDER NAMES ####################
 PERLBENCH_CODE=500.perlbench_r
-BZIP2_CODE=401.bzip2
 GCC_CODE=502.gcc_r
 BWAVES_CODE=503.bwaves_r
-GAMESS_CODE=416.gamess
 MCF_CODE=505.mcf_r
-MILC_CODE=433.milc
-ZEUSMP_CODE=434.zeusmp
-GROMACS_CODE=435.gromacs
-CACTUSADM_CODE=436.cactusADM
-LESLIE3D_CODE=437.leslie3d
+CACTUBSSN_CODE=507.cactuBSSN_r
 NAMD_CODE=508.namd_r
-GOBMK_CODE=445.gobmk
-DEALII_CODE=447.dealII
-SOPLEX_CODE=450.soplex
-POVRAY_CODE=453.povray
-CALCULIX_CODE=454.calculix
-HMMER_CODE=456.hmmer
-DEEPSJENG_CODE=531.deepsjeng_r
-GEMSFDTD_CODE=459.GemsFDTD
-LIBQUANTUM_CODE=462.libquantum
-H264REF_CODE=464.h264ref
-TONTO_CODE=465.tonto
-LBM_CODE=508.lbm_r
+PAREST_CODE=510.parest_r
+POVRAY_CODE=511.povray_r
+LBM_CODE=519.lbm_r
 OMNETPP_CODE=520.omnetpp_r
-ASTAR_CODE=473.astar
 WRF_CODE=521.wrf_r
-SPHINX3_CODE=482.sphinx3
 XALANCBMK_CODE=523.xalancbmk_r
-SPECRAND_INT_CODE=998.specrand
-SPECRAND_FLOAT_CODE=999.specrand
+X264_CODE=525.x264_r
+BLENDER_CODE=526.blender_r
+CAM4_CODE=527.cam4_r
+DEEPSJENG_CODE=531.deepsjeng_r
+IMAGICK_CODE=538.imagick_r
+LEELA_CODE=541.leela_r
+NAB_CODE=544.nab_r
+FOTONIK3D_CODE=549.fotonik3d_r
+ROMS_CODE=554.roms_r
+XZ_CODE=557.xz_r
+# PERLBENCH_CODE=500.perlbench_r
+# BZIP2_CODE=401.bzip2
+# GCC_CODE=502.gcc_r
+# BWAVES_CODE=503.bwaves_r
+# GAMESS_CODE=416.gamess
+# MCF_CODE=505.mcf_r
+# MILC_CODE=433.milc
+# ZEUSMP_CODE=434.zeusmp
+# GROMACS_CODE=435.gromacs
+# CACTUSADM_CODE=436.cactusADM
+# LESLIE3D_CODE=437.leslie3d
+# NAMD_CODE=508.namd_r
+# GOBMK_CODE=445.gobmk
+# DEALII_CODE=447.dealII
+# SOPLEX_CODE=450.soplex
+# POVRAY_CODE=453.povray
+# CALCULIX_CODE=454.calculix
+# HMMER_CODE=456.hmmer
+# DEEPSJENG_CODE=531.deepsjeng_r
+# GEMSFDTD_CODE=459.GemsFDTD
+# LIBQUANTUM_CODE=462.libquantum
+# H264REF_CODE=464.h264ref
+# TONTO_CODE=465.tonto
+# LBM_CODE=508.lbm_r
+# OMNETPP_CODE=520.omnetpp_r
+# ASTAR_CODE=473.astar
+# WRF_CODE=521.wrf_r
+# SPHINX3_CODE=482.sphinx3
+# XALANCBMK_CODE=523.xalancbmk_r
+# SPECRAND_INT_CODE=998.specrand
+# SPECRAND_FLOAT_CODE=999.specrand
+
+
 
 #################### BENCHMARK NAME TO FOLDER NAME MAPPING ######################
 
 BENCHMARK_CODE="none"
 
-if [[ "$BENCHMARK" == "perlbench" ]]; then
+if [["$BENCHMARK" == "perlbench" ]]; then
     BENCHMARK_CODE=$PERLBENCH_CODE
 fi
-if [[ "$BENCHMARK" == "bzip2" ]]; then
-    BENCHMARK_CODE=$BZIP2_CODE
-fi
-if [[ "$BENCHMARK" == "gcc" ]]; then
+
+if [["$BENCHMARK" == "gcc" ]]; then
     BENCHMARK_CODE=$GCC_CODE
 fi
-if [[ "$BENCHMARK" == "bwaves" ]]; then
+
+if [["$BENCHMARK" == "bwaves" ]]; then
     BENCHMARK_CODE=$BWAVES_CODE
 fi
-if [[ "$BENCHMARK" == "gamess" ]]; then
-    BENCHMARK_CODE=$GAMESS_CODE
-fi
-if [[ "$BENCHMARK" == "mcf" ]]; then
+
+if [["$BENCHMARK" == "mcf" ]]; then
     BENCHMARK_CODE=$MCF_CODE
 fi
-if [[ "$BENCHMARK" == "milc" ]]; then
-    BENCHMARK_CODE=$MILC_CODE
+
+if [["$BENCHMARK" == "cactuBSSN" ]]; then
+    BENCHMARK_CODE=$CACTUBSSN_CODE
 fi
-if [[ "$BENCHMARK" == "zeusmp" ]]; then
-    BENCHMARK_CODE=$ZEUSMP_CODE
-fi
-if [[ "$BENCHMARK" == "gromacs" ]]; then
-    BENCHMARK_CODE=$GROMACS_CODE
-fi
-if [[ "$BENCHMARK" == "cactusADM" ]]; then
-    BENCHMARK_CODE=$CACTUSADM_CODE
-fi
-if [[ "$BENCHMARK" == "leslie3d" ]]; then
-    BENCHMARK_CODE=$LESLIE3D_CODE
-fi
-if [[ "$BENCHMARK" == "namd" ]]; then
+
+if [["$BENCHMARK" == "namd" ]]; then
     BENCHMARK_CODE=$NAMD_CODE
 fi
-if [[ "$BENCHMARK" == "gobmk" ]]; then
-    BENCHMARK_CODE=$GOBMK_CODE
+
+if [["$BENCHMARK" == "parest" ]]; then
+    BENCHMARK_CODE=$PAREST_CODE
 fi
-if [[ "$BENCHMARK" == "dealII" ]]; then 
-    BENCHMARK_CODE=$DEALII_CODE
-fi
-if [[ "$BENCHMARK" == "soplex" ]]; then
-    BENCHMARK_CODE=$SOPLEX_CODE
-fi
-if [[ "$BENCHMARK" == "povray" ]]; then
+
+if [["$BENCHMARK" == "povray" ]]; then
     BENCHMARK_CODE=$POVRAY_CODE
 fi
-if [[ "$BENCHMARK" == "calculix" ]]; then
-    BENCHMARK_CODE=$CALCULIX_CODE
-fi
-if [[ "$BENCHMARK" == "hmmer" ]]; then
-    BENCHMARK_CODE=$HMMER_CODE
-fi
-if [[ "$BENCHMARK" == "deepsjeng" ]]; then
-    BENCHMARK_CODE=$DEEPSJENG_CODE
-fi
-if [[ "$BENCHMARK" == "GemsFDTD" ]]; then
-    BENCHMARK_CODE=$GEMSFDTD_CODE
-fi
-if [[ "$BENCHMARK" == "libquantum" ]]; then
-    BENCHMARK_CODE=$LIBQUANTUM_CODE
-fi
-if [[ "$BENCHMARK" == "h264ref" ]]; then
-    BENCHMARK_CODE=$H264REF_CODE
-fi
-if [[ "$BENCHMARK" == "tonto" ]]; then
-    BENCHMARK_CODE=$TONTO_CODE
-fi
-if [[ "$BENCHMARK" == "lbm" ]]; then
+
+if [["$BENCHMARK" == "lbm" ]]; then
     BENCHMARK_CODE=$LBM_CODE
 fi
-if [[ "$BENCHMARK" == "omnetpp" ]]; then
+
+if [["$BENCHMARK" == "omnetpp" ]]; then
     BENCHMARK_CODE=$OMNETPP_CODE
 fi
-if [[ "$BENCHMARK" == "astar" ]]; then
-    BENCHMARK_CODE=$ASTAR_CODE
-fi
-if [[ "$BENCHMARK" == "wrf" ]]; then
+
+if [["$BENCHMARK" == "wrf" ]]; then
     BENCHMARK_CODE=$WRF_CODE
 fi
-if [[ "$BENCHMARK" == "sphinx3" ]]; then
-    BENCHMARK_CODE=$SPHINX3_CODE
-fi
-if [[ "$BENCHMARK" == "xalancbmk" ]]; then
+
+if [["$BENCHMARK" == "xalancbmk" ]]; then
     BENCHMARK_CODE=$XALANCBMK_CODE
 fi
-if [[ "$BENCHMARK" == "specrand_i" ]]; then
-    BENCHMARK_CODE=$SPECRAND_INT_CODE
+
+if [["$BENCHMARK" == "x264" ]]; then
+    BENCHMARK_CODE=$X264_CODE
 fi
-if [[ "$BENCHMARK" == "specrand_f" ]]; then
-    BENCHMARK_CODE=$SPECRAND_FLOAT_CODE
+
+if [["$BENCHMARK" == "blender" ]]; then
+    BENCHMARK_CODE=$BLENDER_CODE
 fi
+
+if [["$BENCHMARK" == "cam4" ]]; then
+    BENCHMARK_CODE=$CAM4_CODE
+fi
+
+if [["$BENCHMARK" == "deepsjeng" ]]; then
+    BENCHMARK_CODE=$DEEPSJENG_CODE
+fi
+
+if [["$BENCHMARK" == "imagick" ]]; then
+    BENCHMARK_CODE=$IMAGICK_CODE
+fi
+
+if [["$BENCHMARK" == "leela" ]]; then
+    BENCHMARK_CODE=$LEELA_CODE
+fi
+
+if [["$BENCHMARK" == "nab" ]]; then
+    BENCHMARK_CODE=$NAB_CODE
+fi
+
+if [["$BENCHMARK" == "fotonik3d" ]]; then
+    BENCHMARK_CODE=$FOTONIK3D_CODE
+fi
+
+if [["$BENCHMARK" == "roms" ]]; then
+    BENCHMARK_CODE=$ROMS_CODE
+fi
+
+if [["$BENCHMARK" == "xz" ]]; then
+    BENCHMARK_CODE=$XZ_CODE
+fi
+
+
+# if [[ "$BENCHMARK" == "perlbench" ]]; then
+#     BENCHMARK_CODE=$PERLBENCH_CODE
+# fi
+# if [[ "$BENCHMARK" == "bzip2" ]]; then
+#     BENCHMARK_CODE=$BZIP2_CODE
+# fi
+# if [[ "$BENCHMARK" == "gcc" ]]; then
+#     BENCHMARK_CODE=$GCC_CODE
+# fi
+# if [[ "$BENCHMARK" == "bwaves" ]]; then
+#     BENCHMARK_CODE=$BWAVES_CODE
+# fi
+# if [[ "$BENCHMARK" == "gamess" ]]; then
+#     BENCHMARK_CODE=$GAMESS_CODE
+# fi
+# if [[ "$BENCHMARK" == "mcf" ]]; then
+#     BENCHMARK_CODE=$MCF_CODE
+# fi
+# if [[ "$BENCHMARK" == "milc" ]]; then
+#     BENCHMARK_CODE=$MILC_CODE
+# fi
+# if [[ "$BENCHMARK" == "zeusmp" ]]; then
+#     BENCHMARK_CODE=$ZEUSMP_CODE
+# fi
+# if [[ "$BENCHMARK" == "gromacs" ]]; then
+#     BENCHMARK_CODE=$GROMACS_CODE
+# fi
+# if [[ "$BENCHMARK" == "cactusADM" ]]; then
+#     BENCHMARK_CODE=$CACTUSADM_CODE
+# fi
+# if [[ "$BENCHMARK" == "leslie3d" ]]; then
+#     BENCHMARK_CODE=$LESLIE3D_CODE
+# fi
+# if [[ "$BENCHMARK" == "namd" ]]; then
+#     BENCHMARK_CODE=$NAMD_CODE
+# fi
+# if [[ "$BENCHMARK" == "gobmk" ]]; then
+#     BENCHMARK_CODE=$GOBMK_CODE
+# fi
+# if [[ "$BENCHMARK" == "dealII" ]]; then 
+#     BENCHMARK_CODE=$DEALII_CODE
+# fi
+# if [[ "$BENCHMARK" == "soplex" ]]; then
+#     BENCHMARK_CODE=$SOPLEX_CODE
+# fi
+# if [[ "$BENCHMARK" == "povray" ]]; then
+#     BENCHMARK_CODE=$POVRAY_CODE
+# fi
+# if [[ "$BENCHMARK" == "calculix" ]]; then
+#     BENCHMARK_CODE=$CALCULIX_CODE
+# fi
+# if [[ "$BENCHMARK" == "hmmer" ]]; then
+#     BENCHMARK_CODE=$HMMER_CODE
+# fi
+# if [[ "$BENCHMARK" == "deepsjeng" ]]; then
+#     BENCHMARK_CODE=$DEEPSJENG_CODE
+# fi
+# if [[ "$BENCHMARK" == "GemsFDTD" ]]; then
+#     BENCHMARK_CODE=$GEMSFDTD_CODE
+# fi
+# if [[ "$BENCHMARK" == "libquantum" ]]; then
+#     BENCHMARK_CODE=$LIBQUANTUM_CODE
+# fi
+# if [[ "$BENCHMARK" == "h264ref" ]]; then
+#     BENCHMARK_CODE=$H264REF_CODE
+# fi
+# if [[ "$BENCHMARK" == "tonto" ]]; then
+#     BENCHMARK_CODE=$TONTO_CODE
+# fi
+# if [[ "$BENCHMARK" == "lbm" ]]; then
+#     BENCHMARK_CODE=$LBM_CODE
+# fi
+# if [[ "$BENCHMARK" == "omnetpp" ]]; then
+#     BENCHMARK_CODE=$OMNETPP_CODE
+# fi
+# if [[ "$BENCHMARK" == "astar" ]]; then
+#     BENCHMARK_CODE=$ASTAR_CODE
+# fi
+# if [[ "$BENCHMARK" == "wrf" ]]; then
+#     BENCHMARK_CODE=$WRF_CODE
+# fi
+# if [[ "$BENCHMARK" == "sphinx3" ]]; then
+#     BENCHMARK_CODE=$SPHINX3_CODE
+# fi
+# if [[ "$BENCHMARK" == "xalancbmk" ]]; then
+#     BENCHMARK_CODE=$XALANCBMK_CODE
+# fi
+# if [[ "$BENCHMARK" == "specrand_i" ]]; then
+#     BENCHMARK_CODE=$SPECRAND_INT_CODE
+# fi
+# if [[ "$BENCHMARK" == "specrand_f" ]]; then
+#     BENCHMARK_CODE=$SPECRAND_FLOAT_CODE
+# fi
 
 # Sanity check
 if [[ "$BENCHMARK_CODE" == "none" ]]; then
