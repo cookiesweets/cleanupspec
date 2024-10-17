@@ -246,7 +246,7 @@ $GEM5_PATH/build/X86_MESI_Two_Level/gem5.opt \
     --outdir=$OUTPUT_DIR $GEM5_PATH/configs/example/spec17_config.py \
     --benchmark=$BENCHMARK --benchmark_stdout=$OUTPUT_DIR/$BENCHMARK.out \
     --benchmark_stderr=$OUTPUT_DIR/$BENCHMARK.err \
-    --num-cpus=1 --mem-size=16GB \
+    --num-cpus=1 --mem-size=8GB \
     --checkpoint-dir=$CKPT_OUT_DIR \
     --checkpoint-restore=$INST_TAKE_CHECKPOINT --at-instruction \
     --l1d_assoc=8 --l2_assoc=16 --l1i_assoc=4 \
