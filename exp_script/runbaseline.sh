@@ -40,7 +40,7 @@ SCHEME_CLEANUPCACHE=UnsafeBaseline  # CleanupSpec (final version)
 # INST_TAKE_CHECKPOINT=100000           # Instruction count after which checkpoint was taken
 
 MAX_INSTS=500000000
-CHECKPOINT_CONFIG="ooo_8Gmem_10Bn_BASE"     
+CHECKPOINT_CONFIG="ooo_8Gmem_10Bn"     
 INST_TAKE_CHECKPOINT=10000000000      
 
 ############ DIRECTORY PATHS TO BE EXPORTED #############
