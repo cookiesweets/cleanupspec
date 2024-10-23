@@ -250,7 +250,9 @@ $GEM5_PATH/build/X86_MESI_Two_Level/gem5.opt \
     --checkpoint-dir=$CKPT_OUT_DIR \
     --checkpoint-restore=$INST_TAKE_CHECKPOINT --at-instruction \
     --l1d_assoc=8 --l2_assoc=16 --l1i_assoc=4 \
-    --cpu-type=DerivO3CPU --needsTSO=0 --scheme_invisispec=UnsafeBaseline \
+    --cpu-type=DerivO3CPU --needsTSO=0 \
+    --restore-with-cpu=DerivO3CPU \
+    --scheme_invisispec=UnsafeBaseline \
     --scheme_cleanupcache=$SCHEME_CLEANUPCACHE \
     --num-dirs=1 --ruby --maxinsts=$MAX_INSTS  \
     --network=simple --topology=Mesh_XY --mesh-rows=1 --prog-interval=0.003MHz | tee -a $SCRIPT_OUT
