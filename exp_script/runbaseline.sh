@@ -33,14 +33,14 @@ BENCHMARK=$1                    # Benchmark name, e.g. perlbench
 RUN_CONFIG="Ref"                      # Name of configuration being run (will decide output directory name)
 
 #SCHEME_CLEANUPCACHE="UnsafeBaseline"   # Baseline 
-SCHEME_CLEANUPCACHE=Cleanup_FOR_L1L2  # CleanupSpec (final version)
+SCHEME_CLEANUPCACHE=UnsafeBaseline  # CleanupSpec (final version)
 
 # MAX_INSTS=500000                      # Number of instructions to be simulated
 # CHECKPOINT_CONFIG="ooo_8Gmem_100K"    # Name of directory inside CKPT_PATH
 # INST_TAKE_CHECKPOINT=100000           # Instruction count after which checkpoint was taken
 
 MAX_INSTS=500000000
-CHECKPOINT_CONFIG="ooo_8Gmem_10Bn"     
+CHECKPOINT_CONFIG="ooo_8Gmem_10Bn_BASE"     
 INST_TAKE_CHECKPOINT=10000000000      
 
 ############ DIRECTORY PATHS TO BE EXPORTED #############
