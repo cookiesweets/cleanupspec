@@ -87,5 +87,5 @@ $GEM5_PATH/build/X86_MESI_Two_Level/gem5.opt \
               --l1d_assoc=8 --l2_assoc=16 --l1i_assoc=4 \
               --cpu-type=DerivO3CPU  --scheme_invisispec=UnsafeBaseline --needsTSO=0 \
               --scheme_cleanupcache=$SCHEME_CLEANUPCACHE \
-              --num-dirs=1 --ruby --maxinsts=100000000 --prog-interval=0.003MHz     \
-              --network=simple --topology=Mesh_XY --mesh-rows=1 | tee -a $SCRIPT_OUT
+              --num-dirs=1 --ruby      \
+              --network=simple --topology=Mesh_XY --mesh-rows=1 
