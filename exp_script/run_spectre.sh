@@ -79,7 +79,6 @@ echo "" | tee -a $SCRIPT_OUT
 # Actually launch gem5!
 # --debug-flags=RubySlicc,RubyPort,Fetch,Decode,Rename,IEW,Activity \
 $GEM5_PATH/build/X86_MESI_Two_Level/gem5.opt \
-              --debug-flags=RubyReadLatency --debug-start=12000000000           \
               --outdir=$OUTPUT_DIR $GEM5_PATH/configs/example/spectre_config.py    \
               --benchmark=$BENCHMARK --benchmark_stdout=$OUTPUT_DIR/$BENCHMARK.out \
               --benchmark_stderr=$OUTPUT_DIR/$BENCHMARK.err \
